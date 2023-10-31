@@ -12,7 +12,7 @@ import Footer from "../components/Footer"
 function Home() {
   
   return (
-    <>
+    <div className="lg:gap-6 flex flex-col">
       <Navbar/>
       <Hero/>
       <Welcome/>      
@@ -22,7 +22,7 @@ function Home() {
       <Contacts/>
       <FooterDonate/>
       <Footer/>
-    </>
+    </div>
   )
 }
 

@@ -25,7 +25,7 @@ function Welcome() {
     <div className='relative mt-2 lg:flex lg:items-center lg:flex-col'>
       <img src='World_Map.png' className='w-screen h-auto lg:w-2/3 opacity-60' alt='World Map' />
       <div className='absolute inset-0 flex flex-col items-center gap-4 px-2 text-zinc-100 '>
-        <h1 className='text-sm text-black sm:text-2xl lg:text-3xl'>Bem-vindo à Casa do Léo</h1>
+        <h1 className='text-sm font-semibold pt-2 text-black sm:text-2xl lg:text-3xl lg:pt-5'>Bem-vindo à Casa do Léo</h1>
 
         <div className='flex w-full justify-around gap-2 items-center p-4 '>
           {cardInfos.map((item, index) => (
