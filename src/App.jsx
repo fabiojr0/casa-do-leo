@@ -1,28 +1,15 @@
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
-import Welcome from "./components/Welcome"
-import AboutUs from "./components/AboutUs"
-import Galery from "./components/Galery"
-import CommonQuestions from "./components/CommonQuestions"
-import Contacts from "./components/Contacts"
-import FooterDonate from "./components/FooterDonate"
-import Footer from "./components/Footer"
-
+import { Route, BrowserRouter as Router, Routes} from "react-router-dom"
+import Home from "./routes/Home"
+import AdminDoador from "./routes/AdminDoador";
 
 function App() {
-  
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Welcome/>      
-      <AboutUs/>
-      <Galery/>
-      <CommonQuestions/>
-      <Contacts/>
-      <FooterDonate/>
-      <Footer/>
-    </>
+    <Router basename="/casa-do-leo">
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/admin/doador" element={<AdminDoador/>}/>
+      </Routes>
+    </Router>
   )
 }
 
