@@ -4,6 +4,7 @@ function Hero() {
   return (
     <div className='relative'>
       <img src='hero-img.png' className='w-screen h-auto' alt='Hero Image' />
+
       <div className='absolute flex flex-col justify-center inset-0 gap-1 px-2 lg:p-8 lg:gap-2 text-zinc-100'>
         <h1 className='font-medium text-sm sm:text-2xl lg:text-4xl'>Contribua para a fundação</h1>
         <span className='font-semibold text-green-500 text-sm sm:text-2xl lg:text-4xl'>Casa do Léo</span>

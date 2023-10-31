@@ -1,4 +1,5 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 
 function QuestionAnswer() {
@@ -18,15 +19,15 @@ function QuestionAnswer() {
   ];
 
   return (
-    <ul className="flex flex-col gap-2 sm:gap-4 w-full p-2 lg:p-10">
+    <ul className={`flex flex-col gap-2 sm:gap-4 w-full p-2 lg:p-10 `}>
       {list.map((item, index) => (
-        <div key={index} className="">
+        <div key={index} >
           <Accordion>
-            <AccordionSummary>
-              <Typography>{item.question}</Typography>
+            <AccordionSummary >
+              <Typography sx={{fontWeight: "bold"}}>{item.question}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{item.answer}</Typography>
+              <Typography sx={{color: "#219653"}}>{item.answer}</Typography>
             </AccordionDetails>
           </Accordion>
         </div>

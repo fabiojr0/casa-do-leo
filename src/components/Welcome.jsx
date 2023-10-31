@@ -24,6 +24,7 @@ function Welcome() {
   return (
     <div className='relative mt-2 lg:flex lg:items-center lg:flex-col '>
       <img src='World_Map.png' className='w-screen h-auto lg:w-2/3 opacity-60' alt='World Map' />
+
       <div className='absolute inset-0 flex flex-col bg-red-500 items-center gap-4 px-2 text-zinc-100 '>
         <h2 className='text-base font-medium text-black sm:text-2xl lg:text-3xl'>Bem-vindo à Casa do Léo</h2>
 
