@@ -6,26 +6,54 @@ import NavbarAdmin from "../components/admin/NavbarAdmin";
 function AdminDoador() {
   const [doador, setDoador] = useState(-1);
 
+  const inputs = [
+    {
+      type: "text",
+      label: "CPF",
+      placeholder: "123.123.123-01",
+    },
+    {
+      type: "text",
+      label: "Nome",
+      placeholder: "Marco Antônio",
+    },
+    {
+      type: "text",
+      label: "Email",
+      placeholder: "usuario@email.com",
+    },
+    {
+      type: "text",
+      label: "Endereço",
+      placeholder: "Rua Gastão Gonçalves",
+    },
+    {
+      type: "text",
+      label: "Telefone",
+      placeholder: "21 912341234",
+    },
+  ];
+
   const doadores = [
     {
-      nome: "Flávio Júlior",
-      cpf: "123.123.123-01",
+      Nome: "Flávio Júlior",
+      CPF: "123.123.123-01",
     },
     {
-      nome: "Rafuel rudin",
-      cpf: "696.969.666-69",
+      Nome: "Rafuel rudin",
+      CPF: "696.969.666-69",
     },
     {
-      nome: "Biel Hesmelinguido",
-      cpf: "123.125.123-01",
+      Nome: "Biel Hesmelinguido",
+      CPF: "123.125.123-01",
     },
     {
-      nome: "Guido Lanches",
-      cpf: "123.123.127-01",
+      Nome: "Guido Lanches",
+      CPF: "123.123.127-01",
     },
     {
-      nome: "Renata Ingrata",
-      cpf: "152.123.523-01",
+      Nome: "Renata Ingrata",
+      CPF: "152.123.523-01",
     },
   ];
 
@@ -35,9 +63,18 @@ function AdminDoador() {
   return (
     <div className="w-screen h-full flex items-center flex-col">
       <NavbarAdmin />
-      <div className="w-screen h-full flex items-center ">
-        <AdminInputs doador={doador !== -1 && doadores[doador]} handleClickDoador={handleClickDoador}/>
-        <AdminList doadores={doadores} indexDoador={doador} handleClickDoador={handleClickDoador}/>
+      <div className="w-screen h-full flex items-center max-lg:flex-col">
+        <AdminInputs
+          infos={doador !== -1 && doadores[doador]}
+          handleClickInfos={handleClickDoador}
+          inputs={inputs}
+        />
+        <AdminList
+          infos={doadores}
+          indexInfos={doador}
+          handleClickInfos={handleClickDoador}
+          showInfos={["Nome", "CPF"]}
+        />
       </div>
     </div>
   );
