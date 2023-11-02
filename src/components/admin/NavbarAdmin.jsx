@@ -1,40 +1,49 @@
 import { List } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 function NavbarAdmin() {
   return (
     <nav className="w-screen flex items-center p-4 bg-verde">
       <ul className="lg:flex items-center gap-6 hidden">
         <li>
-          <a
-            href="#"
-            className="text-white hover:text-zinc-900 transition-all font-semibold "
+          <Link
+            to={"/admin/doador"}
+            className="text-white hover:text-zinc-200 transition-all font-semibold "
           >
             Doador
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
-            className="text-white hover:text-zinc-900 transition-all font-semibold "
+        <Link
+            to={"/admin/doacao"}
+            className="text-white hover:text-zinc-200 transition-all font-semibold "
           >
             Doação
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
-            className="text-white hover:text-zinc-900 transition-all font-semibold "
+        <Link
+            to={"/admin/tipo_de_doacao"}
+            className="text-white hover:text-zinc-200 transition-all font-semibold "
           >
-            Tipo de Doação
-          </a>
+            Tipos de Doação
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
-            className="text-white hover:text-zinc-900 transition-all font-semibold "
+        <Link
+            to={"/admin/fotos"}
+            className="text-white hover:text-zinc-200 transition-all font-semibold "
           >
             Fotos
-          </a>
+          </Link>
+        </li>
+        <li>
+        <Link
+            to={"/admin/admin_user"}
+            className="text-white hover:text-zinc-200 transition-all font-semibold "
+          >
+            Administradores
+          </Link>
         </li>
       </ul>
 

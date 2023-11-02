@@ -34,6 +34,8 @@ function AdminDoador() {
     },
   ];
 
+  
+
   const doadores = [
     {
       Nome: "Flávio Júlior",
@@ -68,12 +70,14 @@ function AdminDoador() {
           infos={doador !== -1 && doadores[doador]}
           handleClickInfos={handleClickDoador}
           inputs={inputs}
-        />
+          page={['Doadores', 'Doador']}
+          />
         <AdminList
           infos={doadores}
           indexInfos={doador}
           handleClickInfos={handleClickDoador}
           showInfos={["Nome", "CPF"]}
+          page={'Doadores'}
         />
       </div>
     </div>
