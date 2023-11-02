@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 function Forms() {
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center gap-6 pb-8">
       <Navbar />
       <span className="flex flex-col items-center p-4 max-lg:gap-2 w-full text-center text-sm lg:text-xl">
         <p>
