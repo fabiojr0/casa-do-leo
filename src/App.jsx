@@ -7,6 +7,7 @@ import AdminTipoDeDoação from "./routes/AdminTipoDeDoação";
 import AdminFotos from "./routes/AdminFotos";
 import AdminUser from "./routes/AdminUser";
 import Forms from "./routes/Forms";
+import Admin from "./routes/Admin";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/formulario" element={<Forms />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/admin/doador" element={<AdminDoador />} />
         <Route path="/admin/doacao" element={<AdminDoação />} />
         <Route path="/admin/tipo_de_doacao" element={<AdminTipoDeDoação />} />
