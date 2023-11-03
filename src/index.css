@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-  font-family: 'Poppins', sans-serif;
-
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  font-family: 'Poppins', sans-serif;
+  
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: black;
+}
+
+.swiper-button-next:hover:after, .swiper-button-prev:hover:after{
+  color: #219653;
+  
+} 
+.swiper-button-next::after, .swiper-button-prev::after{
+  transition: all 500ms;
+  font-weight: bold;
+}
 body {
   overflow-x: hidden;
 }
@@ -17,43 +29,49 @@ body {
   background-image: linear-gradient(to top ,rgba(0,0,0, 1) 15%, rgba(255,255,255, 0) 60%);
 }
 
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-verde transition-all;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green-800;
+}
+
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-100;
+}
+
+
 .inputGroup {
   font-family: 'Segoe UI', sans-serif;
-  margin: 1em 0 1em 0;
-  max-width: 190px;
   position: relative;
 }
 
-.inputGroup input {
+.inputGroup input , .inputGroup textarea{
   font-size: 100%;
-  padding: 10px;
+  padding: 6px;
   outline: none;
   border: 2px solid #219653;
-  background-color: transparent;
   border-radius: 8px;
-  width: 50vh;
+  @apply w-[80vw] md:w-[50vw] lg:w-[25vw] bg-zinc-50;
 }
 
 .inputGroup label {
   font-size: 100%;
   position: absolute;
-  left: 0;
-  padding: 0.8em;
+  left: 1.3em;
   margin-left: 0.5em;
-  pointer-events: none;
   transition: all 0.3s ease;
-  color: rgb(100, 100, 100);
+  transform: translateY(-60%);
+  margin: 0;
+  @apply text-xs lg:text-sm px-2 py-1 text-zinc-950 font-semibold bg-gradient-to-t to-white to-30% from-zinc-50 from-30% ;
 }
 
-.inputGroup :is(input:focus, input:valid)~label {
-  transform: translateY(-180%);
-  margin: 0em;
-  margin-left: 1.3em;
-  padding: 0.4em;
-  background-color: #fff;
-}
-
-.inputGroup :is(input:focus, input:valid) {
-  border-color: #219653;
-  
+.inputGroup input::placeholder, .inputGroup textarea::placeholder {
+  @apply text-zinc-600;
 }

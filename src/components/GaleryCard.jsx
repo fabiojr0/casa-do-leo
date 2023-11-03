@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 
 function GaleryCard({date, img, title}) {
     return (
@@ -9,7 +9,12 @@ function GaleryCard({date, img, title}) {
                 <h3 className='text-zinc-100 text-[0.6rem] text-center final-mobile:text-xs  final-mobile2:text-[1rem]  sm:text-base lg:text-xl'>{title}</h3>
             </div>
         </div>
-    )
+        <h2 className="text-zinc-100 text-xs text-center sm:text-base lg:text-xl">
+          {title}
+        </h2>
+      </div>
+    </div>
+  );
 }
 
-export default GaleryCard
+export default GaleryCard;

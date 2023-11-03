@@ -27,6 +27,8 @@ function Welcome() {
 
       <div className='inset-0 flex flex-col items-center gap-4 px-2 text-zinc-100 '>
         <h2 className='text-base font-semibold text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl'>Bem-vindo à Casa do Léo</h2>
+      <div className='absolute inset-0 flex flex-col  items-center gap-4 px-2 text-zinc-100 '>
+        <h2 className='text-base font-medium text-black sm:text-2xl lg:text-3xl'>Bem-vindo à Casa do Léo</h2>
 
         <div className='flex w-full justify-around gap-4 items-center p-2 flex-col'>
           {cardInfos.map((item, index) => (
