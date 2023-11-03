@@ -22,7 +22,7 @@ function Welcome() {
   ];
 
   return (
-    <div className="relative mt-2 flex items-center flex-col md:bg-[url('World_Map.png')] bg-no-repeat bg-top">
+    <div className="relative mt-2 flex items-center flex-col md:bg-[url('World_Map.png')] bg-no-repeat bg-top bg-contain">
       {/* <img src='World_Map.png' className='w-screen h-auto lg:w-2/3 opacity-60' alt='Mapa Mundi  ' /> */}
 
       <div className="inset-0 flex flex-col  items-center gap-4 px-2 text-zinc-100 ">
