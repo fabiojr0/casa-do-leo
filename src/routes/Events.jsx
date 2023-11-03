@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 
 export default function Events() {
   return (
-  <div className='lg:gap-4 flex flex-col'>
+  <div className='flex flex-col'>
     <Navbar/>
     <GalerySwiper/>
     <RecentEvents/>
