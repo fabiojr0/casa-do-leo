@@ -42,7 +42,7 @@ export default function GalerySwiper() {
 
   return (
     <div>
-      <div className="flex flex-col w-screen items-center justify-center pt-4">
+      <div className="flex flex-col w-screen items-center justify-center pt-14">
         <h1 className="lg:text-2xl font-semibold text-verde">Galeria</h1>
         <div className="w-screen flex justify-center items-center p-5">
           <Swiper
