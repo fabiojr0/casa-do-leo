@@ -20,3 +20,4 @@ function GaleryCard({ date, img, title }) {
 }
 
 export default GaleryCard;
+

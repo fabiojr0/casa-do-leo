@@ -6,7 +6,7 @@ import Button from './Button'
 function Galery() {
     return (
         <div className='w-full flex flex-col items-center gap-1 p-2 mt-2 lg:gap-7 lg:pt-14'>
-            <h1 className='text-sm text-verde font-semibold sm:text-2xl lg:text-3xl'>Galeria de Fotos</h1>
+            <h2 className='text-base font-semibold final-mobile:text-lg text-verde sm:text-2xl lg:text-3xl'>Galeria de Fotos</h2>
 
             <div className='grid grid-cols-3 sm:grid-cols-4 w-full gap-2 p-2 lg:w-3/4 lg:gap-5 lg:p-0'>
                 <GaleryCard title="Campanha do agasalho" date="SET 29" img="avast.png"/>
