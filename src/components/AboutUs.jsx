@@ -11,22 +11,22 @@ function AboutUs() {
         alt="Menino feliz por estudar"
         className="w-[80%] final-mobile:w-[60%] final-mobile2:w-[55%] md:w-[20%] lg:w-[30%] lg:ml-10"
       />
-      <section className="w-full flex flex-col final-mobile:gap-4 max-sm:gap-1 lg:gap-5 lg:w-1/2 ">
-        <h2 className="text-base font-semibold  text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl">
+      <section className="w-full flex flex-col mobile425:gap-2 final-mobile:gap-4 max-sm:gap-1 lg:gap-5 lg:w-1/2 ">
+        <h2 className="text-base font-semibold text-verde final-mobile:text-lg  sm:text-2xl lg:text-3xl">
           Quem Somos
         </h2>
-        <p className="text-[0.7rem] text-verde final-mobile:text-xs sm:text-lg lg:text-lg">
+        <p className="text-xs  text-verde final-mobile:text-xs final-mobile2:text-sm sm:text-lg lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           possimus, nam eaque quae sequi voluptas harum laudantium rem
           molestiae, itaque.
         </p>
-        <p className="text-[0.7rem] text-verde sm:text-lg lg:text-lg max-lg:hidden">
+        <p className="text-xs text-verde final-mobile2:text-sm sm:text-lg lg:text-lg max-lg:hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           possimus, nam eaque quae sequi voluptas harum laudantium rem
           molestiae, itaque.
         </p>
         <Button>
-          Saiba Mais <Play size={20} weight="fill" />
+          Saiba Mais <span className="text-base"><Play weight="fill" /></span>
         </Button>
       </section>
     </div>

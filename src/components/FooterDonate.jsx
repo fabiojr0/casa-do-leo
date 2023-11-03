@@ -4,7 +4,7 @@ import Button from './Button'
 
 function FooterDonate() {
     return (
-        <div className='relative w-screen flex flex-col items-center justify-center gap-2 pb-4 mt-4 lg:gap-4 lg:py-10'>
+        <div className='relative w-screen flex flex-col items-center justify-center gap-2 pb-4 mt-4 final-mobile2:gap-4 lg:gap-4 lg:py-10'>
             <img src='mancha.png' className='absolute w-full h-[120%] -z-10 -top-3'/>
             
             <h4 className='text-verde text-sm font-semibold sm:text-lg lg:text-2xl final-mobile:text-base'>Sua doação pode fazer a diferença</h4>

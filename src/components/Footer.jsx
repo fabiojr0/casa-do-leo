@@ -13,7 +13,7 @@ function  Footer() {
                     <p>|</p>
                     <a href='#'>Galeria de Fotos</a>
                 </div>
-                <div className='flex items-center gap-2 text-verde text-lg sm:text-3xl lg:text-4xl final-mobile:text-xl'>
+                <div className='flex items-center gap-2 text-verde text-lg final-mobile2:text-2 xl sm:text-3xl lg:text-4xl final-mobile:text-xl'>
                     <FacebookLogo  weight='fill'/>
                     <WhatsappLogo  weight='fill'/>
                 </div>

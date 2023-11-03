@@ -11,8 +11,9 @@ export default {
     },
     screens: {
       'sc': '330px',
-      "final-mobile" : "470px",
-      "final-mobile2" : "497px"
+      "mobile425" : '425px',
+      "final-mobile" : "465px",
+      "final-mobile2" : "495px"
     }
   },
 
