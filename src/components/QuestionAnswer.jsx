@@ -13,7 +13,7 @@ function QuestionAnswer() {
       answer: "Atualmente 10 famílias recebem as doações",
     },
     {
-    question: "Recebem doação em dinheiro?",
+      question: "Recebem doação em dinheiro?",
       answer: "Boa pergunta",
     },
   ];
@@ -24,10 +24,24 @@ function QuestionAnswer() {
         <div key={index} >
           <Accordion>
             <AccordionSummary >
-              <Typography sx={{fontWeight: "bold"}}>{item.question}</Typography>
+              <Typography sx={{
+                fontWeight: "bold",
+                fontSize: "0.8rem",
+                color: '#219653',
+                '@media (min-width: 470px)' : {
+                  fontSize:'0.9rem'
+                }
+              }}>{item.question}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography sx={{color: "#219653"}}>{item.answer}</Typography>
+              <Typography sx={{
+                fontWeight: "500",
+                fontSize: "0.8rem",
+                color: "#219653",
+                '@media (min-width: 470px)' : {
+                  fontSize:'0.9rem'
+                }
+              }}>{item.answer}</Typography>
             </AccordionDetails>
           </Accordion>
         </div>
