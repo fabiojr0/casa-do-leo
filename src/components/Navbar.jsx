@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <nav className="w-full flex items-center justify-between p-2 ">
-      <img src="Logo.png" className="h-10 sm:h-16" />
+      <img src="Logo.png" className="h-10 sm:h-16 final-mobile:w-14 final-mobile:h-14" />
       {screenWidth >= 1024 ? (
         <ul className="flex items-center gap-6 ">
           <li>

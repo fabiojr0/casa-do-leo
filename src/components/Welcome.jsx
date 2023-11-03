@@ -22,13 +22,13 @@ function Welcome() {
   ];
 
   return (
-    <div className='relative mt-2 lg:flex lg:items-center lg:flex-col '>
-      <img src='World_Map.png' className='w-screen h-auto lg:w-2/3 opacity-60' alt='World Map' />
+    <div className="relative mt-2 lg:flex lg:items-center lg:flex-col lg:bg-[url('World_Map.png')] bg-no-repeat bg-top">
+      {/* <img src='World_Map.png' className='w-screen h-auto lg:w-2/3 opacity-60' alt='Mapa Mundi  ' /> */}
 
-      <div className='absolute inset-0 flex flex-col bg-red-500 items-center gap-4 px-2 text-zinc-100 '>
-        <h2 className='text-base font-medium text-black sm:text-2xl lg:text-3xl'>Bem-vindo à Casa do Léo</h2>
+      <div className='inset-0 flex flex-col items-center gap-4 px-2 text-zinc-100 '>
+        <h2 className='text-base font-semibold text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl'>Bem-vindo à Casa do Léo</h2>
 
-        <div className='flex w-full justify-around gap-2 items-center p-4 '>
+        <div className='flex w-full justify-around gap-4 items-center p-2 flex-col'>
           {cardInfos.map((item, index) => (
             <React.Fragment key={item.title}>
               {index !== 0 ? <div className='h-4/5 w-0.5 bg-zinc-500 '></div> : <></>}

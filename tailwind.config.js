@@ -10,7 +10,9 @@ export default {
       'verde': "#219653"
     },
     screens: {
-      'sc': '330px'
+      'sc': '330px',
+      "final-mobile" : "470px",
+      "final-mobile2" : "497px"
     }
   },
 
