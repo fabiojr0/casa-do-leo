@@ -2,7 +2,7 @@
 import { Trash } from "@phosphor-icons/react";
 import Button from "../Button";
 
-function AdminList({ infos, handleClickInfos, indexInfos, showInfos, page }) {
+function AdminList({ infos, handleClickInfos, indexInfos, showInfos, page, handleDelete}) {
   return (
     <div className="flex flex-col items-center justify-center w-screen  md:w-[80vw] lg:w-[50vw] h-full p-4 lg:px-16 pt-6 gap-6">
       <div className="bg-verde h-[70vh] w-full rounded-md p-8 flex flex-col gap-2">
@@ -22,17 +22,16 @@ function AdminList({ infos, handleClickInfos, indexInfos, showInfos, page }) {
                 >
                   <p>{index + 1}.</p>
                   <p className="flex-1">
-                    {item[showInfos[0]]} {showInfos.length === 2 && `- ${item[showInfos[1]]}`}
+                    {item[showInfos[0]]}{" "}
+                    {showInfos.length === 2 && `- ${item[showInfos[1]]}`}
                   </p>
-                  <Trash size={24} />
+                  <button onClick={() => handleDelete(index)}>
+                    <Trash size={24} />
+                  </button>
                 </div>
               );
             })}
         </div>
-      </div>
-      <div className="flex w-full flex-row-reverse gap-2">
-        <Button>Salvar</Button>
-        <Button cancel>Cancelar</Button>
       </div>
     </div>
   );

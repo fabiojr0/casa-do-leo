@@ -13,6 +13,7 @@ function Button({ children, cancel, click }) {
             : "bg-verde px-2 py-1 text-white rounded text-xs hover:bg-green-700 transition-all flex items-center sm:text-lg active:translate-y-1 final-mobile:text-sm fina"
         }
         onClick={() => click()}
+        type="submit"
       >
         {children}
       </button>

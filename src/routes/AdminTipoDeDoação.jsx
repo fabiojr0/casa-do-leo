@@ -5,6 +5,7 @@ import NavbarAdmin from "../components/admin/NavbarAdmin";
 
 function AdminTipoDeDoação() {
   const [tipoDoacao, setTipoDoacao] = useState(-1);
+  const [values, setValues] = useState({});
 
   const inputs = [
     {
@@ -44,6 +45,9 @@ function AdminTipoDeDoação() {
           infos={tipoDoacao !== -1 && tiposDeDoacao[tipoDoacao]}
           handleClickInfos={handleClickTipoDoacao}
           inputs={inputs}
+          
+          values={values}
+          setValues={setValues}
           page={["Tipos de Doações", "Tipos de Doação"]}
         />
         <AdminList

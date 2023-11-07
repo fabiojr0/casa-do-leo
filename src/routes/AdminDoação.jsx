@@ -5,7 +5,9 @@ import NavbarAdmin from "../components/admin/NavbarAdmin";
 
 function AdminDoação() {
   const [doacao, setDoacao] = useState(-1);
+  const [values, setValues] = useState({});
 
+  
   const inputs = [
     {
       type: "date",
@@ -64,6 +66,8 @@ function AdminDoação() {
           handleClickInfos={handleClickDoacao}
           inputs={inputs}
           page={["Doações", "Doação"]}
+          values={values}
+          setValues={setValues}
         />
         <AdminList
           infos={doacoes}
