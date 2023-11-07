@@ -5,6 +5,8 @@ import NavbarAdmin from "../components/admin/NavbarAdmin";
 
 function AdminFotos() {
   const [foto, setFoto] = useState(-1);
+  const [values, setValues] = useState({});
+
 
   const inputs = [
     {
@@ -58,6 +60,8 @@ function AdminFotos() {
           infos={foto !== -1 && fotos[foto]}
           handleClickInfos={handleClickFoto}
           inputs={inputs}
+          values={values}
+          setValues={setValues}
           page={['Fotos', 'Foto']}
           />
         <AdminList

@@ -5,6 +5,7 @@ import NavbarAdmin from "../components/admin/NavbarAdmin";
 
 function AdminUser() {
   const [user, setUser] = useState(-1);
+  const [values, setValues] = useState({});
 
   const inputs = [
     {
@@ -43,6 +44,8 @@ function AdminUser() {
           handleClickInfos={handleClickUser}
           inputs={inputs}
           page={['Administradores', 'Administrador']}
+          values={values}
+          setValues={setValues}
           />
         <AdminList
           infos={users}
