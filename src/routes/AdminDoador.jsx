@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import AdminInputs from "../components/admin/AdminInputs";
 import AdminList from "../components/admin/AdminList";
 import NavbarAdmin from "../components/admin/NavbarAdmin";
-
+import { useNavigate } from "react-router-dom";
 import axios from "../api/axios";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const DOADORES_URL = "/doadores/";
 
@@ -12,6 +14,7 @@ function AdminDoador() {
   const [doadores, setDoadores] = useState([]);
   const [newDoador, setNewDoador] = useState(-1);
   const [values, setValues] = useState({});
+  const navigate = useNavigate();
 
   const inputs = [
     {
@@ -50,13 +53,7 @@ function AdminDoador() {
         console.log(JSON.stringify(response?.data));
         setDoadores(response?.data);
       } catch (err) {
-        if (!err?.response) {
-          console.log("No server Response");
-        } else if (err.response?.status === 401) {
-          console.log("a");
-        } else {
-          console.log("Login falhou");
-        }
+        // navigate("/admin");
       }
     }
     getDoadores();
@@ -72,7 +69,8 @@ function AdminDoador() {
           JSON.stringify(values),
           {
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
+              'X-CSRFToken': Cookies.get('csrftoken')
             },
             withCredentials: true,
           }
@@ -105,7 +103,8 @@ function AdminDoador() {
           JSON.stringify(values),
           {
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
+              'X-CSRFToken': Cookies.get('csrftoken')
             },
           }
         );
@@ -128,12 +127,24 @@ function AdminDoador() {
   };
 
   const handleDelete = async (id) => {
-    const ok = confirm("Deseja atualizar este doador?");
+    const ok = confirm("Deseja deletar este doador?");
+    console.log(`${DOADORES_URL}${doadores[id].id}/`)
+
+    const config = {
+      headers: {
+        'X-CSRFToken': cookies.get('csrftoken'), // Adicione o token CSRF ao cabeçalho
+      },
+      withCredentials: true, // Permite o envio de cookies
+    };
+
     if (ok) {
       try {
         const response = await axios.delete(
-          `${DOADORES_URL}${doadores[id].id}/`
-        );
+          `${DOADORES_URL}${doadores[id].id}/`, config);
+
+         
+
+          
 
         setNewDoador(newDoador + 1);
       } catch (err) {
