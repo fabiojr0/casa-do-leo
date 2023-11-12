@@ -50,7 +50,6 @@ function AdminDoador() {
         const response = await axios.get(DOADORES_URL, {
           withCredentials: true,
         });
-        console.log(JSON.stringify(response?.data));
         setDoadores(response?.data);
       } catch (err) {
         // navigate("/admin");
@@ -70,15 +69,17 @@ function AdminDoador() {
           {
             headers: {
               'Content-Type': 'application/json',
-              'X-CSRFToken': Cookies.get('csrftoken')
+              'X-CSRFToken': cookies.get('csrftoken')
             },
             withCredentials: true,
           }
-        );
-
-        setNewDoador(newDoador + 1);
-        setValues({});
+          );
+          
+          console.log(response.data);
+          setNewDoador(newDoador + 1);
+          setValues({});
       } catch (err) {
+        console.error(err)
         if (!err?.response) {
           console.log("No server Response");
         } else if (err.response?.status === 400) {
@@ -167,7 +168,6 @@ function AdminDoador() {
 
   return (
     <div className="w-screen h-full flex items-center flex-col">
-      {console.log(doador)}
       <NavbarAdmin />
       <div className="w-screen h-full flex items-center max-lg:flex-col">
         <AdminInputs

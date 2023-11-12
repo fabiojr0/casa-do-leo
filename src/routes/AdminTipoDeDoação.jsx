@@ -43,7 +43,6 @@ function AdminTipoDeDoação() {
   const handlePost = async (e) => {
     e.preventDefault();
     const ok = confirm("Deseja adicionar um novo tipo de doação?");
-    console.log(cookies.get('csrftoken'))
     if (ok) {
       try {
         const response = await axios.post(
@@ -81,7 +80,7 @@ function AdminTipoDeDoação() {
     if (ok) {
       try {
         const response = await axios.put(
-          `${DOADORES_URL}${doadores[doador].id}/`,
+          `${TIPO_DOACAO_URL}${tipoDoacoes[tipoDoacao].id}/`,
           JSON.stringify(values),
           {
             headers: {
@@ -90,9 +89,37 @@ function AdminTipoDeDoação() {
           }
         );
 
-        setNewDoador(newDoador + 1);
+        setNewTipoDoacao(newTipoDoacao + 1);
         setValues({});
-        setDoador(-1);
+        setTipoDoacao(-1);
+      } catch (err) {
+        if (!err?.response) {
+          console.log("No server Response");
+        } else if (err.response?.status === 400) {
+          console.log("Misssing username or password");
+        } else if (err.response?.status === 401) {
+          console.log("Unauthorized");
+        } else {
+          console.log("Login failed");
+        }
+      }
+    }
+  };
+
+  const handleDelete = async (id) => {
+    const ok = confirm("Deseja deletar este doador?");
+    const config = {
+      headers: {
+        'X-CSRFToken': cookies.get('csrftoken'), // Adicione o token CSRF ao cabeçalho
+      },
+      withCredentials: true, // Permite o envio de cookies
+    };
+
+    if (ok) {
+      try {
+        const response = await axios.delete(
+          `${TIPO_DOACAO_URL}${tipoDoacoes[id].id}/`, config);
+        setNewTipoDoacao(newTipoDoacao + 1);
       } catch (err) {
         if (!err?.response) {
           console.log("No server Response");
@@ -131,6 +158,7 @@ function AdminTipoDeDoação() {
           handleClickInfos={handleClickTipoDoacao}
           showInfos={["nome"]}
           page={"Tipos de Doações"}
+          handleDelete={handleDelete}
         />
       </div>
     </div>

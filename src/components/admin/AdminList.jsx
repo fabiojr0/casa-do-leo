@@ -22,8 +22,9 @@ function AdminList({ infos, handleClickInfos, indexInfos, showInfos, page, handl
                 >
                   <p>{index + 1}.</p>
                   <p className="flex-1">
-                    {item[showInfos[0]]}{" "}
-                    {showInfos.length === 2 && `- ${item[showInfos[1]]}`}
+                    {item[showInfos[0]]}
+                    {item[showInfos[1]] && ` - ${item[showInfos[1]]}`}
+                    {item[showInfos[2]] && ` - ${item[showInfos[2]]}`}
                   </p>
                   <button onClick={() => handleDelete(index)}>
                     <Trash size={24} />
