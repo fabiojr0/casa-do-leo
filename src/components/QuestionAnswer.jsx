@@ -10,17 +10,17 @@ import React from "react";
 function QuestionAnswer() {
   const list = [
     {
-      question: "Como posso doar?",
+      question: "Como posso entrar em contato ?",
       answer:
-        "Basta clicar no botão fazer doação e preencher o formulário e esperar nossa resposta",
+        "Basta clicar no botão quero ser doador e preencher o formulário e esperar nossa resposta.",
     },
     {
-      question: "Quantas famílias são beneficiadas?",
-      answer: "Atualmente 10 famílias recebem as doações",
+      question: "Quantas famílias são beneficiadas ?",
+      answer: "Atualmente 10 famílias recebem as doações.",
     },
     {
-      question: "Recebem doação em dinheiro?",
-      answer: "Boa pergunta",
+      question: "Recebem doação em dinheiro ?",
+      answer: "Não recebemos doação monetária, apenas em itens para as famílias.",
     },
   ];
 

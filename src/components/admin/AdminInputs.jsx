@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Button from "../Button";
 
 function AdminInputs({
@@ -13,6 +13,27 @@ function AdminInputs({
   doacoesInfos,
 }) {
   const [buttonDisable, setButtonDisable] = useState(true);
+  const [imagePreview, setImagePreview] = useState("");
+  const fileRef = useRef(null);
+
+  const handleImageChange = (e) => {
+    const selectedFile = fileRef.current.files[0];
+
+    if (selectedFile) {
+      setImagePreview(URL.createObjectURL(selectedFile));
+
+      setValues({ ...values, [e.target.id]: selectedFile });
+    }
+  };
+  
+  useEffect(() => {
+    setImagePreview(infos.link1)
+  }, [infos]);
+
+  const handleRemoveButtonClick = () => {
+    if (fileRef.current !== null) fileRef.current.value = "";
+    setImagePreview("");
+  };
 
   useEffect(() => {
     infos ? setValues(infos) : setValues({});
@@ -20,13 +41,15 @@ function AdminInputs({
 
   function infosCompleted() {
     const valor = Object.keys(values);
-    const itemsToRemove = page[0] === "Doações" ? 3 : 1
-    if (inputs.length === (infos ? valor.length - itemsToRemove : valor.length)) {
+    const itemsToRemove = page[0] === "Doações" ? 3 : 1;
+    if (
+      inputs.length === (infos ? valor.length - itemsToRemove : valor.length)
+    ) {
       const isEveryFieldFilled = Object.values(values).every(
-        (value) => value !== null && value !== '' 
-        );
-        setButtonDisable(!isEveryFieldFilled);
-      return
+        (value) => value !== null && value !== ""
+      );
+      setButtonDisable(!isEveryFieldFilled);
+      return;
     }
     setButtonDisable(true);
   }
@@ -38,7 +61,6 @@ function AdminInputs({
   return (
     <div className="flex flex-col items-center lg:items-start w-screen md:w-[80vw] lg:w-[50vw] h-full p-4 lg:px-16 pt-6 gap-6">
       <h1 className="text-2xl">{page && page[0]}</h1>
-
       <form
         className="flex flex-col gap-8 f-full items-center lg:items-start"
         onSubmit={submit}
@@ -85,6 +107,29 @@ function AdminInputs({
                 </div>
               );
             }
+            if (item.type === "file") {
+              return (
+                <React.Fragment key={item.label}>
+                  {infos && !imagePreview ? (
+                    <img src={infos.link1} />
+                  ) : (
+                    <img src={imagePreview} />
+                  )}
+                  <div className="inputGroup">
+                    <input
+                      type={"file"}
+                      required=""
+                      id={item.label}
+                      autoComplete="off"
+                      placeholder={item.placeholder}
+                      onChange={handleImageChange}
+                      ref={fileRef}
+                    />
+                    <label htmlFor={item.label}>{item.label}</label>
+                  </div>
+                </React.Fragment>
+              );
+            }
             return (
               <div className="inputGroup" key={item.label}>
                 <input
@@ -105,11 +150,17 @@ function AdminInputs({
           })}
 
         <div className="flex w-full flex-row-reverse gap-2">
-          <Button disabled={buttonDisable} click={() => console.log('a')}>
+          <Button disabled={buttonDisable} click={() => console.log("a")}>
             {infos ? "Atualizar" : "Cadastrar"}
           </Button>
           {infos && (
-            <Button cancel click={() => handleClickInfos(-1)}>
+            <Button
+              cancel
+              click={() => {
+                handleClickInfos(-1);
+                handleRemoveButtonClick();
+              }}
+            >
               Cancelar
             </Button>
           )}

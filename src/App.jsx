@@ -14,7 +14,7 @@ function App() {
     <Router basename="/casa-do-leo">
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/eventos" element={<Events />} />
+        <Route path="/galeria" element={<Events />} />
         <Route path="/formulario" element={<Forms />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/doador" element={<AdminDoador />} />

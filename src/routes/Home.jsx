@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div className="flex flex-col">
-      <Navbar />
+      <Navbar home={true}/>
       <div className="lg:gap-6 flex flex-col">
         <Hero />
         <Welcome />

@@ -1,8 +1,9 @@
 import { List } from "@phosphor-icons/react/dist/ssr";
 import { useEffect, useState } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({home}) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -26,10 +27,10 @@ function Navbar() {
       </a>
       {screenWidth >= 1024 ? (
         <>
-          <ul className="flex items-center gap-6 ">
+          <ul className={`items-center gap-6 ${home ? "flex" : "hidden"}`}>
             <li>
               <a
-                href="/#"
+                href="#hero"
                 className="text-zinc-600 hover:text-verde transition-all font-semibold "
               >
                 Início
@@ -37,7 +38,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#bem-vindo"
                 className="text-zinc-600 hover:text-verde transition-all font-semibold "
               >
                 Bem-Vindo
@@ -45,7 +46,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#quem-somos"
                 className="text-zinc-600 hover:text-verde transition-all font-semibold "
               >
                 Quem Somos
@@ -53,7 +54,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#galeria"
                 className="text-zinc-600 hover:text-verde transition-all font-semibold "
               >
                 Galeria
@@ -61,7 +62,7 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#faq"
                 className="text-zinc-600 hover:text-verde transition-all font-semibold "
               >
                 Perguntas Frequentes
@@ -69,14 +70,16 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="#contato"
                 className="text-zinc-600 hover:text-verde transition-all font-semibold "
               >
                 Contato
               </a>
             </li>
           </ul>
-          <Button>Seja um doador!</Button>
+          <Link to="/">
+            <Button>Seja um doador!</Button>
+          </Link>
         </>
       ) : (
         <List size={32} weight="bold" />

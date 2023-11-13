@@ -22,10 +22,10 @@ function Welcome() {
   ];
 
   return (
-    <div className="relative mt-2 flex items-center flex-col md:bg-[url('World_Map.png')] bg-no-repeat bg-top bg-contain">
+    <div className="relative mt-2 flex items-center flex-col md:bg-[url('World_Map.png')] bg-no-repeat bg-top bg-contain xl:h-[50vh]" id="bem-vindo">
       {/* <img src='World_Map.png' className='w-screen h-auto lg:w-2/3 opacity-60' alt='Mapa Mundi  ' /> */}
 
-      <div className="inset-0 flex flex-col  items-center gap-4 px-2 text-zinc-100 ">
+      <div className="inset-0 flex flex-col  items-center gap-4 px-2 text-zinc-100 xl:gap-20">
         <h2 className="text-base font-semibold text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl">
           Bem-vindo à Casa do Léo
         </h2>

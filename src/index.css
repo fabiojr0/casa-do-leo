@@ -21,8 +21,20 @@
   transition: all 500ms;
   font-weight: bold;
 }
+
+.swiper-slide {
+  @apply w-96 h-96;
+}
+.swiper-wraper {
+  transition: none !important;
+}
+.swiper {
+  margin: 0 !important;
+}
+
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .gradientePreto {
@@ -34,11 +46,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-verde transition-all;
+  @apply bg-zinc-400 transition-all;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-green-800;
+  @apply bg-verde;
 }
 
 
