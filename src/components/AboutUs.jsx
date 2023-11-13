@@ -5,7 +5,7 @@ import Button from "./Button";
 
 function AboutUs() {
   return (
-    <div className="flex gap-4 p-2 px-3 justify-between items-center max-md:my-5 w-full lg:p-8 lg:pt-16" id="quem-somos">
+    <div className="flex gap-4 p-2 px-3 justify-between items-center max-md:my-5 w-full lg:p-8 lg:pt-16 lg:flex-row flex-col" id="quem-somos">
       <img
         src="quemsomos.jpg"
         alt="Menino feliz por estudar"

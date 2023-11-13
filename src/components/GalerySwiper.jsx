@@ -16,7 +16,7 @@ export default function GalerySwiper({ fotos, months }) {
             slidesPerView={3}
             initialSlide={1}
             centeredSlides={true}
-            spaceBetween={0.5}
+            spaceBetween={0.5 }
             navigation={true}
             modules={[Navigation]}
           >
