@@ -56,7 +56,7 @@ function AdminUser() {
   const handlePost = async (e) => {
     e.preventDefault();
     console.log(values);
-    const ok = confirm("Deseja adicionar um novo tipo de doação?");
+    const ok = confirm("Deseja adicionar um novo admin?");
     if (ok) {
       try {
         const response = await axios.post(
@@ -90,7 +90,7 @@ function AdminUser() {
 
   const handlePut = async (e) => {
     e.preventDefault();
-    const ok = confirm("Deseja atualizar este doador?");
+    const ok = confirm("Deseja atualizar este admin?");
     if (ok) {
       try {
         const response = await axios.put(
@@ -121,7 +121,7 @@ function AdminUser() {
   };
 
   const handleDelete = async (id) => {
-    const ok = confirm("Deseja deletar este doador?");
+    const ok = confirm("Deseja deletar este admin?");
     const config = {
       headers: {
         'X-CSRFToken': cookies.get('csrftoken'), // Adicione o token CSRF ao cabeçalho

@@ -76,7 +76,7 @@ function AdminTipoDeDoação() {
 
   const handlePut = async (e) => {
     e.preventDefault();
-    const ok = confirm("Deseja atualizar este doador?");
+    const ok = confirm("Deseja atualizar este tipo de doação?");
     if (ok) {
       try {
         const response = await axios.put(
@@ -107,7 +107,7 @@ function AdminTipoDeDoação() {
   };
 
   const handleDelete = async (id) => {
-    const ok = confirm("Deseja deletar este doador?");
+    const ok = confirm("Deseja deletar este tipo de doação?");
     const config = {
       headers: {
         'X-CSRFToken': cookies.get('csrftoken'), // Adicione o token CSRF ao cabeçalho

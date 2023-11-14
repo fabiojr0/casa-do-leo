@@ -1,4 +1,5 @@
 import { FacebookLogo, WhatsappLogo } from '@phosphor-icons/react'
+import { Link } from "react-router-dom";
 
 function  Footer() {
     return (
@@ -7,11 +8,9 @@ function  Footer() {
             <hr className='w-[90%]'/>
             <div className='flex items-center justify-between w-full'>
                 <div className='text-xs text-verde flex items-center gap-1 sm:text-base lg:text-xl final-mobile:text-sm'>
-                    <a href='#'>Formulário</a>
+                    <Link to="/formulario">Formulário</Link>
                     <p>|</p>
-                    <a href='#'>Sobre nós</a>
-                    <p>|</p>
-                    <a href='#'>Galeria de Fotos</a>
+                    <Link to="/galeria">Galeria de Fotos</Link>
                 </div>
                 <div className='flex items-center gap-2 text-verde text-lg final-mobile2:text-2 xl sm:text-3xl lg:text-4xl final-mobile:text-xl'>
                     <FacebookLogo  weight='fill'/>

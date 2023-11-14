@@ -111,9 +111,9 @@ function AdminInputs({
               return (
                 <React.Fragment key={item.label}>
                   {infos && !imagePreview ? (
-                    <img src={infos.link1} />
+                    <img src={infos.link1} className="h-48"/>
                   ) : (
-                    <img src={imagePreview} />
+                    <img src={imagePreview} className="h-48"/>
                   )}
                   <div className="inputGroup">
                     <input

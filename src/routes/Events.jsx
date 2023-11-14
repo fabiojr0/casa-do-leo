@@ -39,7 +39,7 @@ export default function Events() {
   }, []);
 
   return (
-  <div className='flex flex-col'>
+  <div className='flex flex-col '>
     <Navbar/>
     <GalerySwiper fotos={fotos} months={months}/>
     <RecentEvents fotos={fotos}/>

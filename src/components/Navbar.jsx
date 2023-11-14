@@ -25,9 +25,9 @@ function Navbar({home}) {
           className="h-10 sm:h-16 final-mobile:w-14 final-mobile:h-14"
         />
       </a>
-      {screenWidth >= 1024 ? (
+      {screenWidth >= 800 ? (
         <>
-          <ul className={`items-center gap-6 ${home ? "flex" : "hidden"}`}>
+          <ul className={`items-center gap-6 ${home ? "flex" : "hidden"} xl:text-xl`}>
             <li>
               <a
                 href="#hero"
@@ -77,8 +77,8 @@ function Navbar({home}) {
               </a>
             </li>
           </ul>
-          <Link to="/">
-            <Button>Seja um doador!</Button>
+          <Link to="/formulario">
+              <Button>Seja um doador!</Button>
           </Link>
         </>
       ) : (

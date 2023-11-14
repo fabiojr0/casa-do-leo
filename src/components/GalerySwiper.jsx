@@ -9,8 +9,8 @@ import "swiper/css/navigation";
 export default function GalerySwiper({ fotos, months }) {
   return (
     <div>
-      <div className="flex flex-col w-screen items-center justify-center pt-14">
-        <h1 className="lg:text-2xl font-semibold text-verde">Galeria</h1>
+      <div className="flex flex-col w-screen items-center justify-center pt-6 gap-6 pb-12">
+        <h1 className="lg:text-2xl font-semibold text-verde xl:text-3xl">Galeria</h1>
         <div className="w-screen flex justify-center items-center px-10">
           <Swiper
             slidesPerView={3}

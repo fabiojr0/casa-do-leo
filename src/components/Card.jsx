@@ -8,10 +8,10 @@ function  Card({ title, desc, icon }) {
       <div className="flex align-center justify-center px-6 py-2 rounded-full bg-green-600/20 text-zinc-600  sm:text-lg lg:px-20 lg:py-10 lg:text-4xl">
         {icon}
       </div>
-      <h3 className="font-medium text-sm text-center text-black final-mobile:text-base sm:text-lg lg:text-xl">
+      <h3 className="font-medium text-sm text-center text-black final-mobile:text-base sm:text-lg lg:text-xl xl:text-2xl">
         {title}
       </h3>
-      <span className="font-normal text-xs text-center w-10/12 text-black final-mobile:text-xs final-mobile2:text-sm sm:text-lg lg:text-lg">
+      <span className="font-normal text-xs text-center w-10/12 text-black final-mobile:text-xs final-mobile2:text-sm sm:text-lg lg:text-lg xl:text-xl">
         {desc}
       </span>
     </div>

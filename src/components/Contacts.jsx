@@ -5,7 +5,7 @@ import React from 'react'
 function Contacts() {
     return (
         <div className='flex flex-col items-center mt-4' id="contato">
-            <h2 className='text-base font-semibold  text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl'>Contato</h2>
+            <h2 className='text-base font-semibold  text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl xl:text-4xl'>Contato</h2>
             <div className='flex flex-col gap-4 items-center justify-between p-4 w-full lg:p-8 '>
                 <address className='flex flex-col text-verde justify-between gap-2 w-full text-xs final-mobile:flex-row final-mobile:mt-4 sm:text-lg lg:text-2xl '>
                     <div className='flex flex-col gap-2 text-[0.8rem] final-mobile:text-sm'>

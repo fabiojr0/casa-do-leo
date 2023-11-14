@@ -137,7 +137,7 @@ function AdminFotos() {
   };
 
   const handleDelete = async (id) => {
-    const ok = confirm("Deseja deletar esta foto?");
+    const ok = confirm("Deseja deletar esta foto da galeria?");
     const config = {
       headers: {
         'X-CSRFToken': cookies.get('csrftoken'), // Adicione o token CSRF ao cabeçalho
