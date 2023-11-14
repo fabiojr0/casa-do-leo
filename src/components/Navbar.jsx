@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { List } from "@phosphor-icons/react/dist/ssr";
 import { useEffect, useState } from "react";
 import Button from "./Button";
@@ -18,7 +19,7 @@ function Navbar({home}) {
   }, [screenWidth]);
 
   return (
-    <nav className="w-full flex items-center justify-between p-2 shadow-lg">
+    <nav className="w-full flex items-center justify-between p-2 shadow-lg lg:px-8">
       <a href="/">
         <img
           src="Logo.png"

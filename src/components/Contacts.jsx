@@ -6,15 +6,15 @@ function Contacts() {
     return (
         <div className='flex flex-col items-center mt-4' id="contato">
             <h2 className='text-base font-semibold  text-verde final-mobile:text-lg sm:text-2xl lg:text-3xl'>Contato</h2>
-            <div className='flex flex-col gap-4 items-center justify-between p-4 w-full lg:p-8 '>
-                <address className='flex flex-col text-verde justify-between gap-2 w-full text-xs final-mobile:flex-row final-mobile:mt-4 sm:text-lg lg:text-2xl '>
-                    <div className='flex flex-col gap-2 text-[0.8rem] final-mobile:text-sm'>
-                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl'><FacebookLogo weight="fill"/></div>Casa do Léo </span>
-                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl'><Phone weight="fill"/></div> (99) 9999-9999 </span>
+            <div className='flex flex-col gap-4 items-center justify-between p-4 w-full md:flex-row my-8     lg:p-8 '>
+                <address className='flex flex-col text-verde justify-between gap-2 w-full text-xs final-mobile:flex-row final-mobile:mt-4 md:flex-col sm:text-lg lg:text-2xl '>
+                    <div className='flex flex-col gap-2 text-[0.8rem] final-mobile:text-sm lg:text-lg'>
+                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl lg:text-4xl'><FacebookLogo weight="fill"/></div>Casa do Léo </span>
+                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl lg:text-4xl'><Phone weight="fill"/></div> (99) 9999-9999 </span>
                     </div>
-                    <div className='flex flex-col  gap-2 text-[0.8rem] final-mobile:text-sm'>
-                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl'><Envelope fill='#219653' /></div> email.com@email.com</span>
-                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl'><MapPin /></div>Casa do Léo, número 100 </span>
+                    <div className='flex flex-col  gap-2 text-[0.8rem] final-mobile:text-sm lg:text-lg'>
+                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl lg:text-4xl'><Envelope fill='#219653' /></div> email.com@email.com</span>
+                        <span className='flex items-center gap-1 lg:gap-3'><div className='text-xl final-mobile:text-2xl lg:text-4xl'><MapPin /></div>Casa do Léo, número 100 </span>
                     </div>
                 </address>
 
@@ -30,6 +30,7 @@ function Contacts() {
                     }}
                     allowFullScreen=""
                     loading="lazy"
+                    className=':lg-4/6 lg:h-36'
                 ></iframe>
 
             </div>

@@ -5,17 +5,17 @@ import Button from "./Button";
 
 function AboutUs() {
   return (
-    <div className="flex gap-4 p-2 px-3 justify-between items-center max-md:my-5 w-full lg:p-8 lg:pt-16 lg:flex-row flex-col" id="quem-somos">
+    <div className="flex gap-4 p-2 px-3 justify-between items-center md:flex-row md:p-4 max-md:my-5 w-full lg:p-8 lg:pt-10 lg:flex-row flex-col" id="quem-somos">
       <img
         src="quemsomos.jpg"
         alt="Menino feliz por estudar"
-        className="w-[80%] final-mobile:w-[60%] final-mobile2:w-[55%] md:w-[20%] lg:w-[30%] lg:ml-10"
+        className="w-[70%] final-mobile:w-[60%] final-mobile2:w-[55%] mobile425:w-[60%] md:w-[40%] lg:w-[40%] lg:ml-10"
       />
-      <section className="w-full flex flex-col mobile425:gap-2 final-mobile:gap-4 max-sm:gap-1 lg:gap-5 lg:w-1/2 ">
-        <h2 className="text-base font-semibold text-verde final-mobile:text-lg  sm:text-2xl lg:text-3xl">
+      <section className="w-full flex flex-col mobile425:gap-2 mobile425:px-2 final-mobile:gap-4 max-sm:gap-1 lg:gap-5 lg:w-1/2 ">
+        <h2 className="text-base font-semibold mb-2 text-verde final-mobile:text-lg  sm:text-2xl lg:text-3xl">
           Quem Somos
         </h2>
-        <p className="text-xs final-mobile:text-xs final-mobile2:text-sm sm:text-lg lg:text-xl">
+        <p className="text-xs  mb-2 final-mobile:text-xs final-mobile2:text-sm sm:text-lg lg:text-xl">
           Somos um grupo de pessoas que optou por ajudar pessoas carentes. Essa
           foi a forma que encontramos de estar mais perto do nosso filho, Léo,
           que nos deixou há dez anos. Acreditamos que olhar para o próximo com
